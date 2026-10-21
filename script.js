@@ -12,7 +12,6 @@ const listaDeEstudantes = [
 
 function adicionarNovoNome() {
   let nome = document.getElementById("campoNovoNome").value.trim();
-
   if (nome == "") {
     elementoContador.innerText =
       "Erro: não é possível adicionar um nome vazio.";
@@ -41,56 +40,38 @@ function exibirListaAutomaticamente() {
   for (let i = 0; i < listaDeEstudantes.length; i++) {
     const itemLi = document.createElement("li");
     itemLi.className = "Item-nome";
-
     itemLi.innerHTML = `
             <span>${listaDeEstudantes[i]}</span>
-            <span class="posicao-tag">#${i + 1}</span>
-        `;
-
-    elementoLista.appendChild(itemLi);
-  }
-
+            <span class="posicao-tag">#${i + 1}</span> `;
+    elementoLista.appendChild(itemLi); }
   elementoContador.innerText = `Total exibido: ${listaDeEstudantes.length} estudantes cadastrados.`;
   elementoContador.style.color = "green";
-
   console.log(
-    "Lista exibida com sucesso: " + listaDeEstudantes.length + " nomes.",
-  );
+    "Lista exibida com sucesso: " + listaDeEstudantes.length + " nomes.", );
 }
-
 function exibirOrdemInvertida() {
   elementoLista.innerHTML = "";
-
-  let contador = listaDeEstudantes.length - 1;
-
+  let contador = listaDeEstudantes.length - 1
   while (contador >= 0) {
     const itemLi = document.createElement("li");
-
-    itemLi.className = "Item-nome";
-
+    itemLi.className = "Item-nome"
     itemLi.innerHTML = `
             <span>${listaDeEstudantes[contador]}</span>
-            <span class="posicao-tag">#${contador + 1}</span>
-        `;
-
+            <span class="posicao-tag">#${contador + 1}</span> `;
     elementoLista.appendChild(itemLi);
-
     contador--;
   }
-
   elementoContador.innerText = `Nomes exibidos em ordem inversa: ${listaDeEstudantes.length} estudantes.`;
   elementoContador.style.color = "green";
-
   console.log("Lista exibida em ordem inversa.");
 }
-
 function limparLista() {
   elementoLista.innerHTML = "";
-
   elementoContador.innerText = "Lista limpa pelo usuário. Nenhum nome na tela.";
   elementoContador.style.color = "red";
-
   console.log("Tela limpa.");
 }
 
 exibirListaAutomaticamente();
+
+
