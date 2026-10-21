@@ -66,6 +66,14 @@ button:active {
 #btnNovoNome:hover {
   background-color: #1d4ed8;
 }
+#btnInvertido {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+#btnInvertido:hover {
+  background-color: #1d4ed8;
+}
 
 #btnCarregar {
   background-color: #2563eb;
