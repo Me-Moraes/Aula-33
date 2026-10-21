@@ -1,7 +1,14 @@
 const elementoLista = document.getElementById("listaEstudantes");
 const elementoContador = document.getElementById("contadorNomes");
 
-let listaDeEstudantes = ["Ana", "Bruno", "Carlos", "Mariana", "Pedro"];
+const listaDeEstudantes = [
+  "Beatriz Oliveira",
+  "Carlos Eduardo",
+  "Daniela Santos",
+  "Gabriel Ferreira",
+  "Helena Rodrigues",
+  "Lucas Vinícius"
+];
 
 function adicionarNovoNome() {
   let nome = document.getElementById("campoNovoNome").value.trim();
